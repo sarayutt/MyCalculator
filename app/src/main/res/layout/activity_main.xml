@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.barnista.mycalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="First Number"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/first_number"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:text="+"
+        android:id="@+id/add_butt"
+        android:layout_below="@+id/first_number"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:onClick="onClick_ADD" />
+
+    <Button
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:text="-"
+        android:id="@+id/sub_butt"
+        android:layout_alignBottom="@+id/add_butt"
+        android:layout_toRightOf="@+id/add_butt"
+        android:layout_toEndOf="@+id/add_butt"
+        android:textSize="20dp"
+        android:onClick="onClick_SUB" />
+
+    <Button
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:text="*"
+        android:id="@+id/mul_butt"
+        android:layout_alignBottom="@+id/sub_butt"
+        android:layout_toRightOf="@+id/sub_butt"
+        android:layout_toEndOf="@+id/sub_butt"
+        android:textSize="20dp"
+        android:onClick="onClick_MUL" />
+
+    <Button
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:text="/"
+        android:id="@+id/div_butt"
+        android:layout_alignBottom="@+id/mul_butt"
+        android:layout_toRightOf="@+id/mul_butt"
+        android:layout_toEndOf="@+id/mul_butt"
+        android:textSize="20dp"
+        android:onClick="onClick_DIV" />
+
+    <Button
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:text="^"
+        android:id="@+id/pow_butt"
+        android:layout_alignBottom="@+id/div_butt"
+        android:layout_toRightOf="@+id/div_butt"
+        android:layout_toEndOf="@+id/div_butt"
+        android:textSize="20dp"
+        android:onClick="onClick_POW" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Second Number"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/add_butt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/second_number"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Result Number"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/second_number"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/result_number"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#3658f5"
+        android:textSize="28dp"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/cos_butt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pow_butt"
+        android:layout_toEndOf="@+id/pow_butt"
+        android:layout_toRightOf="@+id/pow_butt"
+        android:onClick="onClick_COS"
+        android:text="tan" />
+
+    <Button
+        android:id="@+id/cos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pow_butt"
+        android:layout_alignTop="@+id/pow_butt"
+        android:layout_toRightOf="@+id/pow_butt"
+        android:onClick="onClick_COS"
+        android:text="cos" />
+
+</RelativeLayout>
